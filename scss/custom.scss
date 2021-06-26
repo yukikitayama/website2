@@ -1,6 +1,9 @@
+$tiffany-blue:rgb(129, 216, 208);
+// $primary: $tiffany-blue;
+
 @import "../node_modules/bootstrap/scss/bootstrap";
+@import "../src/css/blog.css";
 
 .longerFeaturedBackground {
-  background-color: rgb(129, 216, 208);
-
+  background-color: $tiffany-blue;
 }
