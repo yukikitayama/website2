@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -6,6 +6,7 @@
     <script src="https://kit.fontawesome.com/5a2ca6d0d2.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css?family=Playfair&#43;Display:700,900&amp;display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../scss/custom.scss">
+    <title>Yuki Kitayama</title>
   </head>
   <body>
 
@@ -46,7 +47,7 @@
         <div class="col-md-8 px-0">
           <h1 class="display-4 fst-italic">Automation with AWS Lambda and EventBridge</h1>
           <p class="lead my-3">Easy and low-cost automation. You upload code and AWS does complicated things.</p>
-          <p class="lead mb-0"><a href="#featuredPost" class="text-white fw-bold">Continue reading...</a></p>
+          <p class="lead mb-0"><a href="#" class="text-white fw-bold">Continue reading...</a></p>
         </div>
       </div>
 
@@ -58,9 +59,9 @@
                 <div class="card-body">
                   <strong class="d-inline-block mb-2 text-primary">Google Cloud</strong>
                   <h3 class="mb-0">No password on the code with Secret Manager</h3>
-                  <div class="mb-1 text-muted">MMM DD, YYYY</div>
-                  <p class="card-text mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
-                  <a href="#" class="stretched-link text-secondary">Continue reading</a>
+                  <div class="mb-1 text-muted">Jun 27, 2021</div>
+                  <p class="card-text mb-auto">Do you type your password on your code, becuase you think nobody looks at it? Here is a professional way.</p>
+                  <a href="pages/gcp/no-password-on-the-code-with-secret-manager.html" class="stretched-link text-secondary">Continue reading</a>
                 </div>
               </div>
               <div class="col-lg-4 d-none d-lg-block">
@@ -76,8 +77,8 @@
                 <div class="card-body">
                   <strong class="d-inline-block mb-2 text-primary">Data</strong>
                   <h3 class="mb-0">Multiple GitHub accounts on a single PC</h3>
-                  <div class="mb-1 text-muted">MMM DD, YYYY</div>
-                  <p class="mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
+                  <div class="mb-1 text-muted">Jun 24, 2021</div>
+                  <p class="mb-auto">Is switching GitHub accounts annoying, because it asks you every time, or because Windows stores the previous credential?</p>
                   <a href="pages/data/multiple-github-accounts-on-a-single-pc.html" class="stretched-link text-secondary">Continue reading</a>
                 </div>
               </div>
@@ -92,15 +93,15 @@
             <div class="row g-0 shadow-sm h-md-250 overflow-hidden">
               <div class="col-lg-8">
                 <div class="card-body">
-                  <strong class="d-inline-block mb-2 text-primary">Google Cloud</strong>
-                  <h3 class="mb-0">No password on the code with Secret Manager</h3>
-                  <div class="mb-1 text-muted">MMM DD, YYYY</div>
-                  <p class="card-text mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
-                  <a href="#" class="stretched-link text-secondary">Continue reading</a>
+                  <strong class="d-inline-block mb-2 text-primary">Python</strong>
+                  <h3 class="mb-0">Type hints in Python</h3>
+                  <div class="mb-1 text-muted">Jun 27, 2021</div>
+                  <p class="card-text mb-auto">Add type feature like Java to your Python functions. Clear what's that made of and will produce.</p>
+                  <a href="pages/python/type-hints-in-python.html" class="stretched-link text-secondary">Continue reading</a>
                 </div>
               </div>
               <div class="col-lg-4 d-none d-lg-block">
-                <img src="images/security.jpg" class="img-fluid card-img-top rounded-end" alt="...">
+                <img src="images/hint.jpg" class="img-fluid card-img-top rounded-end" alt="Type writer">
               </div>
             </div>
           </div>
@@ -125,57 +126,16 @@
         </div>
       </div>
 
-      <div class="row g-5 mt-1" id="featuredPost">
+      <div class="row g-5 mt-1">
         <div class="col-md-8">
           <article class="blog-post">
-            <h2 class="blog-post-title pt-3">Multiple GitHub accounts on a single PC</h2>
-            <p class="blog-post-meta">Jun 24, 2021</p>
+            <h2 class="blog-post-title pt-3">Post title</h2>
+            <p class="blog-post-meta">MMM DD, YYYY</p>
             <hr>
-            <h2>Issue</h2>
+            <h2>Subtitle</h2>
             <ul>
-              <li>Windows saves the GitHub credentials to Credential Manager. You have to remove it every time you want to push or pull as another GitHub account.</li>
-              <li>For example, you want to push and pull as a work account and personal account in the work PC.</li>
+              <li>XXX.</li>
             </ul>
-            <h2>Overview</h2>
-            <ul>
-              <li>Make SSH keys for each work and personal accounts.</li>
-              <li>Add the SSH keys to each GitHub work and personal account settings.</li>
-              <li>In ~/.gitconfig file, update git global configuration.</li>
-              <li>In ~/.ssh/config file, update SSH configuration.</li>
-              <li>If you already cloned a repository before the above steps, update the remote URL.</li>
-            </ul>
-            <h2>If you already cloned a repo before this</h2>
-            <ul>
-              <li>Work repository</li>
-              <ul>
-                <li>$ git remote set-url REMOTE_NAME git@github.com-work:WORK_NAME/REPOSITORY_NAME.git</li>
-                <ul>
-                  <li>REMOTE_NAME is usually origin</li>
-                  <li>WORK_NAME should be your company organization name in GitHub</li>
-                </ul>
-              </ul>
-              <li>Personal repository</li>
-              <ul>
-                <li>$ git remote set-url REMOTE_NAME git@github.com-work:USERNAME/REPOSITORY_NAME.git</li>
-                <ul>
-                  <li>REMOTE_NAME is usually origin</li>
-                  <li>USERNAME should be your personal GitHub account name.</li>
-                </ul>
-              </ul>
-            </ul>
-            <h2>If you clone a repo from now</h2>
-            <ul>
-              <li>git clone git@github.com-work:WORK_NAME/REPOSITORY_NAME.git</li>
-              <ul>
-                <li>WORK_NAME should be your company organization name in GitHub</li>
-              </ul>
-              <li>git clone git@github.com-personal:USERNAME/REPOSITORY_NAME.git</li>
-            </ul>
-            <h2>Resource</h2>
-            <li><a href="https://dev.to/jogendra/how-to-use-multiple-github-accounts-on-single-machine-2me9" class="stretched-link text-secondary">How to use multiple GitHub accounts on single machine</a></li>
-            <li><a href="https://dev.to/sammm/setting-up-multiple-github-accounts-on-the-same-computer-without-having-to-change-the-repo-url-1007" class="stretched-link text-secondary">Setting up multiple github accounts on the same computer (without having to change the repo url)</a></li>
-            <li><a href="https://medium.com/@pinglinh/how-to-have-2-github-accounts-on-one-machine-windows-69b5b4c5b14e" class="stretched-link text-secondary">How to have 2 or more GitHub accounts on one machine (Windows)</a></li>
-            <li><a href="https://betterprogramming.pub/how-to-use-multiple-github-accounts-with-one-computer-c9ba3f851b75" class="stretched-link text-secondary">How to Use Multiple GitHub Accounts With One Computer</a></li>
           </article>
         </div>
 
