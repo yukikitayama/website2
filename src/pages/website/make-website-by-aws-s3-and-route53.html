@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://kit.fontawesome.com/5a2ca6d0d2.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Playfair&#43;Display:700,900&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../../scss/custom.scss">
+  </head>
+  <body>
+
+    <div class="container">
+      <header class="blog-header py-3">
+        <div class="row flex-nowrap justify-content-between align-items-center">
+          <div class="col-4 pt-1">
+            <!-- <a class="link-secondary" href="#">Subscribe</a> -->
+          </div>
+          <div class="col-4 text-center">
+            <a class="blog-header-logo text-dark" href="../../index.html">Yuki Kitayama</a>
+          </div>
+          <div class="col-4 d-flex justify-content-end align-items-center">
+            <!-- <a class="link-secondary" href="#" aria-label="Search"> -->
+              <!-- <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="mx-3" role="img" viewBox="0 0 24 24"><title>Search</title><circle cx="10.5" cy="10.5" r="7.5"/><path d="M21 21l-5.2-5.2"/></svg> -->
+            <!-- </a> -->
+            <!-- <a class="btn btn-sm btn-outline-secondary" href="#">Sign up</a> -->
+          </div>
+        </div>
+      </header>
+    
+      <div class="nav-scroller py-1 mb-2">
+        <nav class="nav d-flex justify-content-between">
+          <a class="p-2 link-secondary" href="../../index.html">Home</a>
+          <a class="p-2 link-secondary" href="#">Google Cloud</a>
+          <a class="p-2 link-secondary" href="#">AWS</a>
+          <a class="p-2 link-secondary" href="#">Python</a>
+          <a class="p-2 link-secondary" href="#">Data</a>
+          <a class="p-2 link-secondary" href="#">Algorithm</a>
+          <a class="p-2 link-secondary" href="#">Java</a>
+          <a class="p-2 link-secondary" href="#">Website</a>
+          <a class="p-2 link-secondary" href="#">Video</a>
+        </nav>
+      </div>
+    </div>
+
+    <main class="container">
+      <div class="row g-5">
+        <div class="col-md-8">
+          <article class="blog-post">
+            <h2 class="blog-post-title pt-3">Make website by AWS S3 and Route 53</h2>
+            <p class="blog-post-meta">Jun 29, 2021</p>
+            <hr>
+            <h2>Idea</h2>
+            <ul>
+              <li>Make a container to have website contents in AWS S3, and make it public to let everyone view your files there.</li>
+              <li>Buy a domain name in AWS Route 53 and configure the domain name goes to your S3 bucket. So people type your domain name in a browser to see your website.</li>
+              <li>For the cost, unless you store huge files, S3 is almost free. Route 53 monthly cost is $0.5 with an initial cost about $10. So minimum about $10 to $20 estimate.</li>
+            </ul>
+
+            <h2>S3</h2>
+            <ul>
+              <li>S3 is a product in AWS, something like a folder you can save files and data. We can configure who can access the data in S3 and how.</li>
+              <li>The reason for using S3 here is to make your website contents accessible to everyone anytime.</li>
+            </ul>
+
+            <h2>Route 53</h2>
+            <ul>
+              <li>Route 53 is also an AWS product where you can search whether a specific domain name is available, and if yes, you can buy it.</li>
+              <ul>
+                <li>A domain name is a combination of certain characters and dot something like xxx.com or yyy.org.</li>
+              </ul>
+              <li>After buying, you can configure where to go when people type your domain name in a web browser, to S3 here.</li>
+            </ul>
+
+            <h2>Steps</h2>
+            <ul>
+              <li>The following is a very beginner friendly, AWS official documentation about how to use S3 and Route 53 to make a website. If you just follow step by step, you can make it happen.</li>
+              <ul>
+                <li><a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/website-hosting-custom-domain-walkthrough.html" target="_blank" class="text-secondary">Configuring a static website using a custom domain registered with Route 53</a></li>
+              </ul>
+            </ul>
+
+            <h2>Web design</h2>
+            <ul>
+              <li>S3 and Route 53 is kind of like a framework to run a website. But you need to prepare the actual contents, at least you need to store in S3 contents HTML files and styling CSS files.</li>
+              <li>To learn that, I took the following Web Design for Everybody courses in Coursera by University of Michigan. I think it was good.</li>
+              <ul>
+                <li><a href="https://www.coursera.org/specializations/web-design" target="_blank" class="text-secondary">Web Design for Everybody: Basics of Web Development & Coding Specialization</a></li>
+              </ul>
+            </ul>
+
+            <h2>Example</h2>
+            <ul>
+              <li>This website is from S3 and Route 53.</li>
+              <li>I store files in S3, such as content page HTML files, styling CSS files, functions JavaScript files, and image JPG files.</li>
+              <li>I bought yukikitayama.com domain in Route 53, which was $12 for one time fee, and $0.5 monthly fee.</li>
+            </ul>
+            
+            <h2>Resource</h2>
+            <ul>
+              <li><a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/website-hosting-custom-domain-walkthrough.html" target="_blank" class="text-secondary">Configuring a static website using a custom domain registered with Route 53</a></li>
+              <li><a href="https://www.coursera.org/specializations/web-design" target="_blank" class="text-secondary">Web Design for Everybody: Basics of Web Development & Coding Specialization</a></li>
+              <li><a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/Welcome.html" target="_blank" class="text-secondary">What is Amazon S3?</a></li>
+              <li><a href="https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/Welcome.html" target="_blank" class="text-secondary">What is Amazon Route 53</a></li>
+            </ul>
+          </article>
+        </div>
+
+        <div class="col-md-4">
+          <div class="position-sticky" style="top: 2rem;">
+            <div class="d-flex justify-content-center mb-3">
+            <img src="../../images/github_profile_picture.png" alt="Profile photo" height="200">
+            </div>
+
+            <div class="p-4 mb-3 rounded aboutBackground">
+              <h4 class="fst-italic">About</h4>
+              <p class="mb-0">Recently I'm very easy to forget things😵 so I started recording knowledge and skill here in an accessible and open manner📝 I hope this is useful for you too🔥 Enjoy staying here!😄</p>
+            </div>
+
+            <div class="p-4">
+              <h4 class="fst-italic">Elsewhere</h4>
+                <a href="https://www.linkedin.com/in/yukikitayama/" target="_blank"><i class="fab fa-linkedin fa-lg" style="color: #0a66c2;"></i></a>
+                <a href="https://www.youtube.com/channel/UCF5zMl6jTJaHpyxLj66FAXw" target="_blank"><i class="fab fa-youtube fa-lg" style="color: #ff0000;"></i></a>
+                <a href="https://github.com/yukikitayama" target="_blank"><i class="fab fa-github fa-lg" style="color: #000000;"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+  <footer class="blog-footer">
+    <small>&copy; Yuki Kitayama</small>
+    <p>
+      <a href="#" class="text-secondary">Back to top</a>
+    </p>
+  </footer>
+
+  <script src="../../index.js"></script>
+</body>
+</html>

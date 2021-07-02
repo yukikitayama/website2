@@ -4,3 +4,5 @@ node_modules
 dist
 wa4e
 env
+src/py/moviedata.json
+src/images/profile_*

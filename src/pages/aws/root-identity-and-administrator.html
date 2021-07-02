@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://kit.fontawesome.com/5a2ca6d0d2.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Playfair&#43;Display:700,900&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../../scss/custom.scss">
+    <title>AWS</title>
+  </head>
+  <body>
+
+    <div class="container">
+      <header class="blog-header py-3">
+        <div class="row flex-nowrap justify-content-between align-items-center">
+          <div class="col-4 pt-1">
+            <!-- <a class="link-secondary" href="#">Subscribe</a> -->
+          </div>
+          <div class="col-4 text-center">
+            <a class="blog-header-logo text-dark" href="../../index.html">Yuki Kitayama</a>
+          </div>
+          <div class="col-4 d-flex justify-content-end align-items-center">
+            <!-- <a class="link-secondary" href="#" aria-label="Search"> -->
+              <!-- <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="mx-3" role="img" viewBox="0 0 24 24"><title>Search</title><circle cx="10.5" cy="10.5" r="7.5"/><path d="M21 21l-5.2-5.2"/></svg> -->
+            <!-- </a> -->
+            <!-- <a class="btn btn-sm btn-outline-secondary" href="#">Sign up</a> -->
+          </div>
+        </div>
+      </header>
+    
+      <div class="nav-scroller py-1 mb-2">
+        <nav class="nav d-flex justify-content-between">
+          <a class="p-2 link-secondary" href="../../index.html">Home</a>
+          <a class="p-2 link-secondary" href="#">Google Cloud</a>
+          <a class="p-2 link-secondary" href="aws-main.html">AWS</a>
+          <a class="p-2 link-secondary" href="#">Python</a>
+          <a class="p-2 link-secondary" href="#">Data</a>
+          <a class="p-2 link-secondary" href="#">Algorithm</a>
+          <a class="p-2 link-secondary" href="#">Java</a>
+          <a class="p-2 link-secondary" href="#">Website</a>
+          <a class="p-2 link-secondary" href="#">Video</a>
+        </nav>
+      </div>
+    </div>
+
+    <main class="container">
+      <div class="row g-5">
+        <div class="col-md-8">
+          <article class="blog-post">
+            <h2 class="blog-post-title pt-3">Root identity and administrator</h2>
+            <p class="blog-post-meta">Jun 30, 2021</p>
+            <hr>
+            <h2>Root identity (root account credential)</h2>
+            <ul>
+              <li>The combinarion of the email address and password which is used to create an AWS account initially.</li>
+              <li>The root has all the permissions. Too many permissions for everyday use.</li>
+              <li>AWS recommends not to use the root account for everyday use. With the administrator and account alias described below, sign in to AWS resources becomes easier.</li>
+            </ul>
+
+            <h2>Administrator</h2>
+            <ul>
+              <li>The conventional name for the everyday use accounts.</li>
+              <li>There is no such account by default, so we create a new user Administrator and create a new group Administrators, and make the user belong to the group.</li>
+              <li>Go to IAM, Users, Make a user, Administrator</li>
+              <li>Groups, Make a group, Administrators</li>
+              <ul>
+                <li>This group has an AdministratorAccess policy</li>
+              </ul>
+            </ul>
+
+            <h2>Account alias</h2>
+            <ul>
+              <li>By default, all the AWS accounts are automatically assigned a unique 12 digit numbers, but it's hard to remember it, so we give a name.</li>
+              <li>Not only to hide Account ID from the console, sign-in becomes easier by typing this meaningful alias rather than random 12 digit numbers.</li>
+              <li>Go to IAM, Dashboard, click Customize next to Sign-in URL, type the account alias.</li>
+            </ul>
+
+            <h2>Sign in to AWS</h2>
+            <ul>
+              <li>Use account alias, administrator name, administrator password are to sign in AWS.</li>
+              <li>We can avoid security question which appears all the time when you try to sign in by the root account.</li>
+            </ul>
+
+            <h2>Reset password of a user</h2>
+            <ul>
+              <li>Go to Security credentials tab of the user.</li>
+              <li>Click manage next to Console password.</li>
+              <li>Set password, Custom password, type a new password.</li>
+            </ul>
+
+            <h2>Resource</h2>
+            <ul>
+              <li><a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/getting-started_create-admin-group.html" target="_blank" class="text-secondary">Create your first IAM admin user and user group</a></li>
+              <li><a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_passwords_admin-change-user.html#id_credentials_passwords_admin-change-user_console" target="_blank" class="text-secondary">Reset user password</a></li>
+            </ul>
+          </article>
+        </div>
+
+        <div class="col-md-4">
+          <div class="position-sticky" style="top: 2rem;">
+            <div class="d-flex justify-content-center mb-3">
+              <img src="../../images/github_profile_picture.png" alt="Profile photo" height="200">
+            </div>
+
+            <div class="p-4 mb-3 rounded aboutBackground">
+              <h4 class="fst-italic">About</h4>
+              <p class="mb-0">Recently I'm very easy to forget things😵 so I started recording knowledge and skill here in an accessible and open manner📝 I hope this is useful for you too🔥 Enjoy staying here!😄</p>
+            </div>
+
+            <div class="p-4">
+              <h4 class="fst-italic">Elsewhere</h4>
+                <a href="https://www.linkedin.com/in/yukikitayama/" target="_blank"><i class="fab fa-linkedin fa-lg" style="color: #0a66c2;"></i></a>
+                <a href="https://www.youtube.com/channel/UCF5zMl6jTJaHpyxLj66FAXw" target="_blank"><i class="fab fa-youtube fa-lg" style="color: #ff0000;"></i></a>
+                <a href="https://github.com/yukikitayama" target="_blank"><i class="fab fa-github fa-lg" style="color: #000000;"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="blog-footer">
+      <p><small>&copy; Yuki Kitayama</small></p>
+      <p>
+        <a href="#" class="text-secondary">Back to top</a>
+      </p>
+    </footer>
+
+    <script src="../../index.js"></script>
+  </body>
+</html>
