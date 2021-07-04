@@ -1,6 +1,7 @@
-# If you use types other than built-in types, such as list, 
-# you need to import from typing standard module
+# If you need list of types
 from typing import List
+# If multiple types are possible
+from typing import Union
 
 
 # Integer type hint
@@ -8,13 +9,28 @@ def func1(n: int) -> int:
     return n * n
 
 
+# List of type
 def func2(nums: List[int]) -> int:
     return max(nums)
 
 
+# Built-in list
+def func3(param: list) -> list:
+    result = param.append('d')
+    print(result)
+    return result
+
+
 # Type hint with default value to argument
-def func3(num: int = 0) -> int:
+def func4(num: int = 0) -> int:
     return num
+
+
+# None if a function returns nothing
+# Union if multiple types could be used
+def func5(param: Union[int, str]) -> None:
+    result = param * 2
+    print(f'func4 result: {result}')
 
 
 # If the type hint refers to a class before defined,
@@ -38,8 +54,15 @@ def main():
     print(func2([1, 2, 3]))
     # 3
 
-    print(func3())
+    param_list = ['a', 'b', 'c']
+    print(func3(param_list))
+
+    print(func4())
     # 0
+
+    print(func5(1))
+
+    print(func5('test'))
 
 
 if __name__ == "__main__":

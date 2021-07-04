@@ -32,13 +32,13 @@
         <nav class="nav d-flex justify-content-between">
           <a class="p-2 link-secondary" href="../../index.html">Home</a>
           <a class="p-2 link-secondary" href="#">Google Cloud</a>
-          <a class="p-2 link-secondary" href="aws-main.html">AWS</a>
+          <a class="p-2 link-secondary" href="../aws/aws-main.html">AWS</a>
           <a class="p-2 link-secondary" href="#">Python</a>
           <a class="p-2 link-secondary" href="#">Data</a>
           <a class="p-2 link-secondary" href="#">Algorithm</a>
           <a class="p-2 link-secondary" href="#">Java</a>
           <a class="p-2 link-secondary" href="#">Website</a>
-          <a class="p-2 link-secondary" href="#">Video</a>
+          <a class="p-2 link-secondary" href="video-main.html">Video</a>
         </nav>
       </div>
     </div>
@@ -47,84 +47,23 @@
       <div class="row g-5">
         <div class="col-md-8">
           <article class="blog-post">
-            <h2 class="blog-post-title pt-3">Amazon DynamoDB</h2>
-            <p class="blog-post-meta">Jul 1, 2021</p>
+            <h2 class="blog-post-title pt-3">Lightworks fundamentals</h2>
+            <p class="blog-post-meta">Jul 3, 2021</p>
             <hr>
             <h2>Idea</h2>
             <ul>
               <li>XXX</li>
             </ul>
 
-            <h2>Why DynamoDB?</h2>
+            <h2>Free Music Archive</h2>
             <ul>
+              <li><a href="https://freemusicarchive.org/" target="_blank" class="text-secondary">https://freemusicarchive.org/</a></li>
               <li></li>
             </ul>
 
-            <h2>Run DynamoDB Local</h2>
-            <ul>
-              <li>Get the downloadable version of Amazon DynamoDB, which has a JAR file.</li>
-              <ul>
-                <li><a href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/DynamoDBLocal.DownloadingAndRunning.html" target="_blank" class="text-secondary">Deploying DynamoDB Locally on Your Computer</a></li>
-              </ul>
-              <li>Before using AWS Python client with DynamoDB, go to the directory which contains the JAR file, and run the following in the terminal.</li>
-              <ul>
-                <li class="my-1"><span class="text-light bg-dark rounded p-1">$ java -Djava.library.path=./DynamoDBLocal_lib -jar DynamoDBLocal.jar -sharedDb</span></li>
-              </ul>
-            </ul>
-
-            <h2>Memo from AWS DynamoDB documentation</h2>
-            <ul>
-              <li>Basic components</li>
-              <ul>
-                <li>Tables</li>
-                <li>Items</li>
-                <li>Attributes</li>
-              </ul>
-              <li>When you make a table, you must have the primary, which uniquely identifies each item.</li>
-              <li>2021-07-01 next time start from <a href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/GettingStarted.Python.03.html" target="_blank" class="text-secondary">Step 3: Create, Read, Update, and Delete an Item with Python</li>
-            </ul>
-
-            <h2>Memo from Coursera DynamoDB courses</h2>
-              <ul>
-                <li>NoSQL means Not only SQL, non-relational-SQL</li>
-                <li>Types of NoSQL database</li>
-                <ul>
-                  <li>Key-value</li>
-                  <ul>
-                    <li>DynamoDB</li>
-                  </ul>
-                  <li>Column-based</li>
-                  <ul>
-                    <li>Cassandra, HBase</li>
-                  </ul>
-                  <li>Document-based</li>
-                  <ul>
-                    <li>MongoDB</li>
-                  </ul>
-                </ul>
-                <li>Primary key = Partition key</li>
-                <ul>
-                  <li>No two items can have the same primary key value</li>
-                </ul>
-                <li>Table size does not have a limit.</li>
-                <li>The max item size for DynamoDB items is 400 kilobytes</li>
-                <ul>
-                  <li>For example, you can store a large object in S3, and store the metadata of the object in DynamoDB.</li>
-                </ul>
-                <li>The maximum length for a partition key is 2048 bytes, and sort key1024 bytes.</li>
-                <li>Not every item in the table can have the same number of attributes. This is part of the flexible schema that NoSQLdatabases provide us.</li>
-                <li>Secondary index</li>
-                <ul>
-                  <li>Allow you to create a copy of your table with an alternate key schema.</li>
-                  <li>Make other attributes queryable.</li>
-                </ul>
-                <li>DynamoDB is a serverless database.</li>
-              </ul>
-
             <h2>Resource</h2>
             <ul>
-              <li><a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/getting-started_create-admin-group.html" target="_blank" class="text-secondary">Create your first IAM admin user and user group</a></li>
-              <li><a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_passwords_admin-change-user.html#id_credentials_passwords_admin-change-user_console" target="_blank" class="text-secondary">Reset user password</a></li>
+              <li><a href="#" target="_blank" class="text-secondary">XXX</a></li>
             </ul>
           </article>
         </div>
