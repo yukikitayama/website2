@@ -119,12 +119,31 @@
                   <li>Make other attributes queryable.</li>
                 </ul>
                 <li>DynamoDB is a serverless database.</li>
+                <li>By default, scan will only return a subset of the data up until the limit you set or 1MB.</li>
+                <li>On-demand table</li>
+                <ul>
+                  <li>You are able to handle thousands of requests without any capacity planning</li>
+                </ul>
+                <li>Monitoring DynamoDB</li>
+                <ul>
+                  <li>CloudTrail</li>
+                  <ul>
+                    <li>Send even logs to S3.</li>
+                  </ul>
+                  <li>CloudWatch</li>
+                  <ul>
+                    <li>Create alarms and notifications</li>
+                  </ul>
+                  <li>X-Ray</li>
+                  <ul>
+                    <li>Analyze the behavior of the distributed applications with end-to-end tracing capabilities. This will help you to identify performance bottlenecks, edge case errors, and other hard-to-detect issues, especially when working with complex distributed applications built using microservices architecture, or even simple asynchronous event calls and three-tiered web applications.</li>
+                  </ul>
+                </ul>
               </ul>
 
             <h2>Resource</h2>
             <ul>
-              <li><a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/getting-started_create-admin-group.html" target="_blank" class="text-secondary">Create your first IAM admin user and user group</a></li>
-              <li><a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_passwords_admin-change-user.html#id_credentials_passwords_admin-change-user_console" target="_blank" class="text-secondary">Reset user password</a></li>
+              <li><a href="https://www.coursera.org/learn/dynamodb-nosql-database-driven-apps" target="_blank" class="text-secondary">Coursera Amazon DynamoDB: Building NoSQL Database-Driven Applications</a></li>
             </ul>
           </article>
         </div>
