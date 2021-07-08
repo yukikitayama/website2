@@ -32,7 +32,7 @@
           <a class="p-2 link-secondary" href="../../index.html">Home</a>
           <a class="p-2 link-secondary" href="#">Google Cloud</a>
           <a class="p-2 link-secondary" href="../aws/aws-main.html">AWS</a>
-          <a class="p-2 link-secondary" href="#">Python</a>
+          <a class="p-2 link-secondary" href="../python/index.html">Python</a>
           <a class="p-2 link-secondary" href="../data/index.html">Data</a>
           <a class="p-2 link-secondary" href="#">Algorithm</a>
           <a class="p-2 link-secondary" href="#">Java</a>
@@ -46,61 +46,75 @@
       <div class="row g-5">
         <div class="col-md-8">
           <article class="blog-post">
-            <h2 class="blog-post-title pt-3">Make website by AWS S3 and Route 53</h2>
-            <p class="blog-post-meta">Jun 29, 2021</p>
+            <h2 class="blog-post-title pt-3">Angular</h2>
+            <p class="blog-post-meta">Jul 5, 2021</p>
             <hr>
             <h2>Idea</h2>
             <ul>
-              <li>Make a container to have website contents in AWS S3, and make it public to let everyone view your files there.</li>
-              <li>Buy a domain name in AWS Route 53 and configure the domain name goes to your S3 bucket. So people type your domain name in a browser to see your website.</li>
-              <li>For the cost, unless you store huge files, S3 is almost free. Route 53 monthly cost is $0.5 with an initial cost about $10. So minimum about $10 to $20 estimate.</li>
+              <li>XXX.</li>
             </ul>
 
-            <h2>S3</h2>
+            <h2>Setup</h2>
             <ul>
-              <li>S3 is a product in AWS, something like a folder you can save files and data. We can configure who can access the data in S3 and how.</li>
-              <li>The reason for using S3 here is to make your website contents accessible to everyone anytime.</li>
-            </ul>
-
-            <h2>Route 53</h2>
-            <ul>
-              <li>Route 53 is also an AWS product where you can search whether a specific domain name is available, and if yes, you can buy it.</li>
+              <li><span class="bg-dark text-light rounded p-1">$ cd DIRECTORY_CONTAIN_PROJECTS</span></li>
+              <li><span class="bg-dark text-light rounded p-1">$ ng new PROJECT_NAME --no-strict</span></li>
               <ul>
-                <li>A domain name is a combination of certain characters and dot something like xxx.com or yyy.org.</li>
+                <li>Change --no-strict mode later, but for getting started.</li>
+                <li><strong>N</strong> to Would you like to add Angular routing</li>
+                <li><strong>CSS</strong>, for the moment, to Which stylesheet format would you like to use?</li>
               </ul>
-              <li>After buying, you can configure where to go when people type your domain name in a web browser, to S3 here.</li>
-            </ul>
-
-            <h2>Steps</h2>
-            <ul>
-              <li>The following is a very beginner friendly, AWS official documentation about how to use S3 and Route 53 to make a website. If you just follow step by step, you can make it happen.</li>
+              <li><span class="bg-dark text-light rounded p-1">$ cd PROEJCT_NAME</span></li>
+              <li><span class="bg-dark text-light rounded p-1">$ ng serve</span></li>
               <ul>
-                <li><a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/website-hosting-custom-domain-walkthrough.html" target="_blank" class="text-secondary">Configuring a static website using a custom domain registered with Route 53</a></li>
+                <li>Run development server, and you can see the website in a browser in <a href="http://localhost:4200/" class="text-secondary">http://localhost:4200/</a></li>
+                <li>Keep it running while developing. It automatically watches the project and rebuids new changes.</li>
               </ul>
             </ul>
 
-            <h2>Web design</h2>
+            <h2>Use Bootstrap in Angular</h2>
             <ul>
-              <li>S3 and Route 53 is kind of like a framework to run a website. But you need to prepare the actual contents, at least you need to store in S3 contents HTML files and styling CSS files.</li>
-              <li>To learn that, I took the following Web Design for Everybody courses in Coursera by University of Michigan. I think it was good.</li>
+              <li><span class="bg-dark text-light rounded p-1">$ npm install bootstrap</span></li>
+              <li>Open angular.json and update "styles" like the following.</li>
               <ul>
-                <li><a href="https://www.coursera.org/specializations/web-design" target="_blank" class="text-secondary">Web Design for Everybody: Basics of Web Development & Coding Specialization</a></li>
+                <li>Add "node_modules/bootstrap/dist/css/bootstrap.min.css", (for example) before "src/styles.css"</li>
               </ul>
+              <li>Rerun <span class="bg-dark text-light rounded p-1">$ ng serve</span> again.</li>
+              <li>Go to http://localhost:4200/, open Developer Console, Sources tab, style.css</li>
+              <li>Bootstrap is successfully added if you see Bootstrap in the comment section in style.css.</li>
+              <li>Now you can use Bootstrap classes in app component HTML files.</li>
             </ul>
 
-            <h2>Example</h2>
+            <h2>Component</h2>
             <ul>
-              <li>This website is from S3 and Route 53.</li>
-              <li>I store files in S3, such as content page HTML files, styling CSS files, functions JavaScript files, and image JPG files.</li>
-              <li>I bought yukikitayama.com domain in Route 53, which was $12 for one time fee, and $0.5 monthly fee.</li>
+              <li>Put everything in app folder. Make a subfolder whose name is equal to component names.</li>
+              <li>In selector you typically makes elements (like a tag), and don't use attribute ([COMPONENT]) and class selector (.COMPONENT).</li>
             </ul>
             
+            <h2>Databinding</h2>
+            <ul>
+              <li>Databinding is communication between TypeScript code and the template HTML that users see.</li>
+              <li>Output data from TypeScript to template HTML</li>
+              <ul>
+                <li>String interpolation by {{ data }}, or property binding by [property] = "data"</li>
+              </ul>
+              <li>React to user events from template HTML to TypeScript</li>
+              <ul>
+                <li>Event binding by (event) = "expression".</li>
+              </ul>
+              <li>Combine both called Two-way-binding by [(ngModel)]="data"</li>
+            </ul>
+
+            <h2>Angular CLI</h2>
+            <ul>
+              <li><span class="bg-dark text-light rounded p-1">$ ng generate component COMPONENT_NAME</span></li>
+              <ul>
+                <li>Create a template folder and files in app folder, and add import and declarations to app.moudle.ts.</li>
+              </ul>
+            </ul>
+
             <h2>Resource</h2>
             <ul>
-              <li><a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/website-hosting-custom-domain-walkthrough.html" target="_blank" class="text-secondary">Configuring a static website using a custom domain registered with Route 53</a></li>
-              <li><a href="https://www.coursera.org/specializations/web-design" target="_blank" class="text-secondary">Web Design for Everybody: Basics of Web Development & Coding Specialization</a></li>
-              <li><a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/Welcome.html" target="_blank" class="text-secondary">What is Amazon S3?</a></li>
-              <li><a href="https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/Welcome.html" target="_blank" class="text-secondary">What is Amazon Route 53</a></li>
+              <li><a href="https://www.udemy.com/course/the-complete-guide-to-angular-2/" target="_blank" class="text-secondary">Udemy Angular - The Complete Guide (2021 Edition)</a></li>
             </ul>
           </article>
         </div>

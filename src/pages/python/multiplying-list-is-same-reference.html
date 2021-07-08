@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -6,7 +6,6 @@
     <script src="https://kit.fontawesome.com/5a2ca6d0d2.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css?family=Playfair&#43;Display:700,900&amp;display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../../../scss/custom.scss">
-    <title>Video</title>
   </head>
   <body>
 
@@ -33,68 +32,44 @@
           <a class="p-2 link-secondary" href="../../index.html">Home</a>
           <a class="p-2 link-secondary" href="#">Google Cloud</a>
           <a class="p-2 link-secondary" href="../aws/aws-main.html">AWS</a>
-          <a class="p-2 link-secondary" href="#">Python</a>
-          <a class="p-2 link-secondary" href="#">Data</a>
+          <a class="p-2 link-secondary" href="index.html">Python</a>
+          <a class="p-2 link-secondary" href="../data/index.html">Data</a>
           <a class="p-2 link-secondary" href="#">Algorithm</a>
           <a class="p-2 link-secondary" href="#">Java</a>
-          <a class="p-2 link-secondary" href="#">Website</a>
-          <a class="p-2 link-secondary" href="video-main.html">Video</a>
+          <a class="p-2 link-secondary" href="../website/index.html">Website</a>
+          <a class="p-2 link-secondary" href="../video/index.html">Video</a>
         </nav>
       </div>
     </div>
 
     <main class="container">
-      <div class="row row-cols-1 row-cols-md-2 g-4">
-
-        <div class="col">
-          <div class="card">
-            <div class="row g-0 shadow-sm h-md-250 overflow-hidden">
-              <div class="col-lg-8">
-                <div class="card-body">
-                  <strong class="d-inline-block mb-2 text-primary">Video</strong>
-                  <h3 class="mb-0">Lightworks fundamentals</h3>
-                  <div class="mb-1 text-muted">Jul 3, 2021</div>
-                  <p class="card-text mb-auto">Lightworks is a software to edit video.</p>
-                  <a href="lightworks-fundamentals.html" class="stretched-link text-secondary">Continue reading</a>
-                </div>
-              </div>
-              <div class="col-lg-4 d-none d-lg-block">
-                <img src="../../images/video.jpg" class="img-fluid card-img-top rounded-end" alt="Automation">
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col">
-          <div class="card">
-            <div class="row g-0 shadow-sm h-md-250 overflow-hidden">
-              <div class="col-lg-8">
-                <div class="card-body">
-                  <strong class="d-inline-block mb-2 text-primary">Video</strong>
-                  <h3 class="mb-0">Music resource</h3>
-                  <div class="mb-1 text-muted">Jul 3, 2021</div>
-                  <p class="card-text mb-auto">XXX.</p>
-                  <a href="music-resource.html" class="stretched-link text-secondary">Continue reading</a>
-                </div>
-              </div>
-              <div class="col-lg-4 d-none d-lg-block">
-                <img src="../../images/music-2.jpg" class="img-fluid card-img-top rounded-end" alt="Automation">
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-
-      <div class="row g-5 mt-1">
+      <div class="row g-5">
         <div class="col-md-8">
           <article class="blog-post">
-            <h2 class="blog-post-title pt-3">Post title</h2>
-            <p class="blog-post-meta">MMM DD, YYYY</p>
+            <h2 class="blog-post-title pt-3">Multiplying list is same reference</h2>
+            <p class="blog-post-meta">Jul 5, 2021</p>
             <hr>
-            <h2>Subtitle</h2>
+
+            <h2>Issue</h2>
             <ul>
-              <li>XXX.</li>
+              <li>You just wanted to initialize matrix, but when you updated the elements, the result was not what you expected.</li>
+              <li>Other elements were updated with the same values.</li>
+            </ul>
+
+            <h2>Idea</h2>
+            <ul>
+              <li>When you multiply Python list, those lists all contain the same reference.</li>
+              <li>You need to use list comprehension instead.</li>
+            </ul>
+
+            <h2>Example</h2>
+            <script src="https://gist-it.appspot.com/github.com/yukikitayama/website2/blob/main/src/py/multiply_list_same_reference.py"></script>
+
+            <h2>Resource</h2>
+            <ul>
+              <li><a href="https://riptutorial.com/python/example/12259/list-multiplication-and-common-references
+" target="_blank" class="text-secondary">List multiplication and common references</a></li>
+              <li><a href="https://stackoverflow.com/questions/6688223/python-list-multiplication-3-makes-3-lists-which-mirror-each-other-when" target="_blank" class="text-secondary">Python list multiplication: [[…]]*3 makes 3 lists which mirror each other when modified [duplicate]</a></li>
             </ul>
           </article>
         </div>
@@ -102,7 +77,7 @@
         <div class="col-md-4">
           <div class="position-sticky" style="top: 2rem;">
             <div class="d-flex justify-content-center mb-3">
-              <img src="../../images/github_profile_picture.png" alt="Profile photo" height="200">
+            <img src="../../images/github_profile_picture.png" alt="Profile photo" height="200">
             </div>
 
             <div class="p-4 mb-3 rounded aboutBackground">
@@ -119,16 +94,15 @@
           </div>
         </div>
       </div>
-
     </main>
 
-    <footer class="blog-footer">
-      <p><small>&copy; Yuki Kitayama</small></p>
-      <p>
-        <a href="#" class="text-secondary">Back to top</a>
-      </p>
-    </footer>
+  <footer class="blog-footer">
+    <small>&copy; Yuki Kitayama</small>
+    <p>
+      <a href="#" class="text-secondary">Back to top</a>
+    </p>
+  </footer>
 
-    <script src="../../index.js"></script>
-  </body>
+  <script src="../../index.js"></script>
+</body>
 </html>
