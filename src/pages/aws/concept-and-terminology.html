@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+  <h2>Serverless</h2>
+    <ul>
+      <li>XXX</li>
+      <li>Lambda, DynamoDB</li>
+    </ul>
+
+  <h2>Decoupled architecture</h2>
+  <ul>
+    <li>Computing architecture that enables computing components or layers to execute independently while still interfacing with each other</li>
+    <li>Simple Queue Service (SQS)</li>
+    <ul>
+      <li>Queues for storing messages while messages travel between application components, so it allows you to move data between distributed application components.</li>
+    </ul>
+    <li>Simple Workflow Service (SWF)</li>
+    <ul>
+      <li>A web service which coordinates work across distibuted application components.</li>
+    </ul>
+  </ul>
+
+  <h2>Throughput</h2>
+  <ul>
+    <li>Measure how much data (how many packets) arrive at the destination successfully.</li>
+    <li>Unit to measure is data per second, or bits per second.</li>
+    <li>A high performance service has a high throughput.</li>
+  </ul>
+
+  <h2>Fanout</h2>
+  <ul>
+    <li>A message is published to an SNS topic. The message is replicated and pushed to multiple SQS queues. It allows for parallel synchronous processing.</li>
+    <li>In practice, assing SNS message filter policy to the topic subscription. The subscriber only receives a message that they are interested in.</li>
+  </ul>
+
+  <h2>Resource</h2>
+  <ul>
+    <li>https://www.dnsstuff.com/network-throughput-bandwidth</li>
+  </ul>
+  
+</body>
+</html>
+
+
