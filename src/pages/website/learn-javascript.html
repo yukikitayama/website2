@@ -144,6 +144,50 @@
             <h2>IIFE</h2>
             <ul>
               <li>Immediately Invoked Function Expression</li>
+              <li>(function(){})());</li>
+              <ul>
+                <li>Between {} put a usual code. Variables made by var inside will be local variables (local scope, not global scope), and outside of this IIFE, those variable will not be accessible.</li>
+                <li>Making wariables by var in IIFE are called namespacing.</li>
+              </ul>
+              <li>Any function can be IIFE. By wrapping a normal function with (NORMAL_FUNCTION_EXPRESSION)();</li>
+              <ul>
+                <li>The function will run right off without actually calling it.</li>
+              </ul>
+              <li>"use strict"; at the top of script tag restricts that you can make a variable without var. "use strict"; can be used in the IIFE.</li>
+            </ul>
+
+            <h2>Different ways of making variables</h2>
+            <ul>
+              <li>const</li>
+              <ul>
+                <li>const will hold the value but once you've set the value, you cannot change the value. This will keep you from accidentally reassingning a value to a variable.</li>
+              </ul>
+              <li>let</li>
+              <ul>
+                <li>let allows you to change a value of a variable, but it has block-level scope.</li>
+                <li>For example, if you use let in for loop block, you can change a variable by let in the for loop, but out of the loop, the variable is not available.</li>
+              </ul>
+              <li>These const and let are so useful that it allows us to never use var. Use const wherever you can, otherwise use let.</li>
+            </ul>
+
+            <h2>Hoisting</h2>
+            <ul>
+              <li>Hoisting variables means you can use the variables before declaring them.</li>
+              <li>This leads to unexpected results, so you should declare variables first.</li>
+              <li>const and let variables are not hoisted, but var variables are hoisting</li>
+              <ul>
+                <li>For example, if you console log out a variable before the code of var variable = "something";, it can still throw no error with undefined value.</li>
+              </ul>
+            </ul>
+
+            <h2>Link an external JavaScript file to HTML file</h2>
+            <ul>
+              <li>Add a script tag with src="JAVESCRIPT_FILE.js" at the bottom of the body tag</li>
+              <li>Add a script tag with the src path in the head tag, but add defer in the script tag.</li>
+              <ul>
+                <li>defer make the code run as if the script tag is at the bottom of the page.</li>
+                <li>It allows us to keep HTML as clean as possible, easy to understand, easy to update, easy for Google to crawl.</li>
+              </ul>
             </ul>
 
             <h2>Resource</h2>
