@@ -1,0 +1,23 @@
+
+EC2 lifecycle instance states
+- pending
+  - The instance is preparing to be the running state, either by launching for the first time, or by restarting after the stopped state.
+- running
+  - Ready for use.
+- stopping
+  - preparing to be the stopped state. During this state, if it's preparing to stop, you won't get billed, but if it's preparing to hibernate, you will be billed.
+- stopped
+  - shut down, cannot be used, but can be restarted at any time.
+- shutting-down
+  - Preparing to be the terminated state
+- terminated
+  - The instance is permanently deleted, cannot be restarted. Only the reserved instances are still billed until the end of the term.
+
+Hibernate EC2 instances
+- Save the instance memory (RAM) data to Amazon Elastic Block Store root volume.
+- When you restart the instance, RAM contents are reloaded, previously running processes are resumed, previously attached data volumnes are reattached.
+- Hibernation stores private and elastic IP addresses. 
+
+Resource
+- https://aws.amazon.com/blogs/aws/new-hibernate-your-ec2-instances/
+- https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Hibernate.html
